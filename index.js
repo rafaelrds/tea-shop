@@ -2,11 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const keys = require('./config/keys');
+require('./models/Product');
 
 mongoose.Promise = global.Promise;
 mongoose.connect(keys.mongoURI);
 
 const app = express();
+
+require('./routes/productRoutes')(app);
 
 app.get('/api/hello', (req, res) => {
   res.send({ Hello: 'World...' });

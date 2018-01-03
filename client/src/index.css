@@ -1,5 +1,33 @@
+App {
+  background-color: rgb(0, 255, 128);
+}
+
 body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+}
+
+.container {
+  width: auto;
+  max-width: 900px;
+  padding: 9 15px; 
+}
+
+.container .footer-text {
+  margin: 20px 0;
+}
+
+.badge {
+  background-color: #e4aa48;
+}
+
+button.link {
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 3;
+  outline: none;
+  outline-offset: 0;
+  color: grey;
 }
