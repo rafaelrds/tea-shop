@@ -5,10 +5,10 @@ import { Grid, Col, Row, Button, Carousel } from 'react-bootstrap';
 
 import { getProducts } from '../actions/product_actions'
 
-import {ProductItem} from './product_item';
+import { ProductItem } from './product_item';
 
 class ProductList extends Component {
-  componentDidMount(){
+  componentDidMount() {
     //dispatch an action
     this.props.getProducts();
   }
@@ -18,26 +18,26 @@ class ProductList extends Component {
       (
         <Col xs={12} sm={6} md={4} key={product._id}>
           <ProductItem
-                _id={product._id}
-                title={product.title}
-                description={product.description}
-                price={product.price}
-                image={product.image}/>
+            _id={product._id}
+            name={product.name}
+            description={product.description}
+            price={product.price}
+            image={product.image} />
         </Col>
       )
     );
-    return(
+    return (
       <Grid>
-        <Row style={{marginTop:'50px'}}>
+        <Row style={{ marginTop: '50px' }}>
           {ProductList}
         </Row>
-      </Grid>  
+      </Grid>
     )
   }
 }
 
 function mapStateToProps(state) {
-  return{
+  return {
     products: state.products.products
   }
 }
