@@ -6,7 +6,7 @@ module.exports = (app) => {
     req.session.cart = cart;
     req.session.save(function (err) {
       if (err) {
-        console.log("# API POST CART: ", err);
+        console.error("#API POST CART: ", err);
       }
       res.json(req.session.cart);
     })

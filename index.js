@@ -26,7 +26,7 @@ mongoose.connect(keys.mongoURI);
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, '# MongoDB - connection error:'));
 
-// SET UP SESSIONS
+// Set up Sessions
 app.use(session({
   secret: 'beBold',
   saveUninitialized: false,
@@ -35,10 +35,10 @@ app.use(session({
   store: new MongoStore({ mongooseConnection: db, ttl: 2 * 24 * 60 * 60 })
 }));
 
-// LOADS CART ROUTES
+// Load Cart Routes
 require('./routes/cartRoutes')(app);
 
-// LOADS PRODUCT ROUTES
+// Load Product Routes
 require('./routes/productRoutes')(app);
 
 
