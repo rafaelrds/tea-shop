@@ -1,5 +1,9 @@
-App {
-  background-color: rgb(0, 255, 128);
+.product-description {
+  height: 100px;
+}
+
+.well {
+  min-height: 255px;
 }
 
 body {
@@ -27,6 +31,7 @@ button.link {
   border: none;
   margin: 0;
   padding: 3px;
+  width: 100px;
   outline: none;
   outline-offset: 0;
   color: grey;

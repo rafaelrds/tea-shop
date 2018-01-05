@@ -57,7 +57,7 @@ class ProductItem extends Component {
       <Well>
         <Row>
           <Col xs={12} sm={4}>
-            <Image src={this.props.image} responsive />
+            <Image alt src={this.props.image} responsive />
           </Col>
           <Col xs={12} sm={8}>
             <h4>{this.props.name}</h4>
