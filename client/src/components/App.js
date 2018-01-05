@@ -1,12 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
-import ProductList from './containers/product_list'
-import TeaMenu from './components/tea_menu';
-import Footer from './components/footer'
-import { Nav, NavItem, Navbar, Badge } from 'react-bootstrap';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
+import '../style/App.css';
+import ProductList from '../containers/product_list'
+import TeaMenu from './tea_menu';
+import Footer from './footer'
+import { Nav, NavItem, Navbar, Badge, Row } from 'react-bootstrap';
 
-class App extends Component {
+export class App extends Component {
+
   render() {
     return (
       <div className="App">
@@ -23,5 +26,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;

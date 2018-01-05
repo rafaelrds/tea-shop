@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 const Product = mongoose.model('products');
 
-module.exports = app => {
+module.exports = (app) => {
   app.get('/api/products', (req, res) => {
-    Product.find(function(err, products) {
+    Product.find(function (err, products) {
       if (err) {
         res.send(err);
       }

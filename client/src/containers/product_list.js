@@ -4,13 +4,18 @@ import { bindActionCreators } from 'redux';
 import { Grid, Col, Row, Button, Carousel } from 'react-bootstrap';
 
 import { getProducts } from '../actions/product_actions'
-
-import { ProductItem } from './product_item';
+import ProductItem from './product_item';
+import { getCart } from '../actions/cart_actions';
+import Cart from './cart';
 
 class ProductList extends Component {
   componentDidMount() {
     //dispatch an action
     this.props.getProducts();
+    this.props.getCart();
+  }
+  constructor(props) {
+    super();
   }
 
   render() {
@@ -31,6 +36,9 @@ class ProductList extends Component {
         <Row style={{ marginTop: '50px' }}>
           {ProductList}
         </Row>
+        <Row>
+          <Cart />
+        </Row>
       </Grid>
     )
   }
@@ -43,7 +51,8 @@ function mapStateToProps(state) {
 }
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
-    getProducts: getProducts
+    getProducts: getProducts,
+    getCart: getCart
   }, dispatch)
 }
 

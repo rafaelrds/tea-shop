@@ -4,16 +4,15 @@ import logger from 'redux-logger';
 import thunk from 'redux-thunk';
 import { applyMiddleware, createStore } from 'redux';
 import ReactDOM from 'react-dom';
-import { Provider } from 'react-redux';
+import { Provider } from 'react-redux';
 
 // actions
 import { getProducts } from './actions/product_actions';
 import reducers from './reducers/index';
 
-
+// main component and css
 import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import { App } from './components/App';
 
 const middleware = applyMiddleware(thunk, logger);
 const store = createStore(reducers, middleware);
@@ -23,5 +22,3 @@ ReactDOM.render(
     <App />
   </Provider>
   , document.getElementById('root'));
-
-registerServiceWorker();

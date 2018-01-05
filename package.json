@@ -12,15 +12,18 @@
     "server": "nodemon index.js",
     "client": "npm run start --prefix client",
     "dev": "concurrently \"npm run server\" \"npm run client\"",
-    "heroku-postbuild":
-      "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.17.2",
+    "connect-mongo": "^1.3.2",
+    "morgan": "^1.8.2",
     "concurrently": "^3.5.0",
+    "cookie-parser": "~1.4.3",
     "express": "^4.15.3",
+    "express-session": "^1.15.4",
     "lodash": "^4.17.4",
     "mongoose": "^4.11.1",
     "nodemon": "^1.11.0"
