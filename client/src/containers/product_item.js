@@ -59,7 +59,7 @@ class ProductItem extends Component {
           <Col xs={12} sm={4}>
             <Image src={this.props.image} responsive />
           </Col>
-          <Col>
+          <Col xs={12} sm={8}>
             <h4>{this.props.name}</h4>
             <p>{(this.props.description.length > 50 && this.state.isClicked === false)
               ? (this.props.description.substring(0, 50))
