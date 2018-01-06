@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Panel, Col, Row, Button, ButtonGroup, Modal } from 'react-bootstrap';
+import { Image, Panel, Col, Row, Button, ButtonGroup, Modal } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
 
 import { getCart, deleteFromCart, updateCart } from '../actions/cart_actions';
@@ -38,6 +38,7 @@ class Cart extends Component {
     this.state = {
       showModal: false
     };
+    this.bitcoinWalletImage = require('../images/wallet.png');
   }
 
   open() {
@@ -101,8 +102,14 @@ class Cart extends Component {
                 <Modal.Title>Confirm Purchase</Modal.Title>
               </Modal.Header>
               <Modal.Body>
-                {/* <h6>Current Items: </h6> */}
-                {/* TODO: Insert a payment form */}
+                <h4>Just transfer to the following Bitcoin address and we
+                    will process your order automatically.
+                </h4>
+                <Image
+                  className="payment-method"
+                  alt src={this.bitcoinWalletImage}
+                  title="Wallet 1PrhdEBmdiYydUJEnDGLmwYk3pbVvDDdMg"
+                  responsive />
               </Modal.Body>
               <Modal.Footer>
                 <Row>
