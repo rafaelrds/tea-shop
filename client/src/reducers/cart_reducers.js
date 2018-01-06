@@ -19,7 +19,6 @@ export function cartReducers(state = { cart: [] }, action) {
         totalAmount: totals(action.payload).amount,
         totalQty: totals(action.payload).qty
       };
-      break;
 
     case DELETE_FROM_CART:
       return {
@@ -28,7 +27,6 @@ export function cartReducers(state = { cart: [] }, action) {
         totalAmount: totals(action.payload).amount,
         totalQty: totals(action.payload).qty
       };
-      break;
 
     case UPDATE_CART:
       return {
@@ -37,11 +35,9 @@ export function cartReducers(state = { cart: [] }, action) {
         totalAmount: totals(action.payload).amount,
         totalQty: totals(action.payload).qty
       }
-      break;
-
+    default:
+      return state;
   }
-
-  return state;
 }
 
 // CALCULATE TOTALS

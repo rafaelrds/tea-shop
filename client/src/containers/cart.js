@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { Panel, Col, Row, Well, Button, ButtonGroup, Label, Modal } from 'react-bootstrap';
+import { Panel, Col, Row, Button, ButtonGroup, Modal } from 'react-bootstrap';
 import { bindActionCreators } from 'redux';
 
 import { getCart, deleteFromCart, updateCart } from '../actions/cart_actions';
@@ -33,11 +33,11 @@ class Cart extends Component {
     this.props.updateCart(_id, 1, this.props.cart);
   }
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       showModal: false
-    }
+    };
   }
 
   open() {

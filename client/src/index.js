@@ -7,7 +7,6 @@ import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 
 // actions
-import { getProducts } from './actions/product_actions';
 import reducers from './reducers/index';
 
 // main component and css

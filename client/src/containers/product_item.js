@@ -41,11 +41,12 @@ class ProductItem extends Component {
     }
   }
 
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       isClicked: false
     }
+
   }
 
   onReadMore() {

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import { Grid, Col, Row, Button, Carousel } from 'react-bootstrap';
+import { Grid, Col, Row } from 'react-bootstrap';
 
 import { getProducts } from '../actions/product_actions'
 import ProductItem from './product_item';
@@ -13,9 +13,6 @@ class ProductList extends Component {
     //dispatch an action
     this.props.getProducts();
     this.props.getCart();
-  }
-  constructor(props) {
-    super();
   }
 
   render() {

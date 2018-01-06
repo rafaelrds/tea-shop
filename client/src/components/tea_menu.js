@@ -1,5 +1,5 @@
 import React from 'react';
-import { Nav, NavItem, Navbar, Badge } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 
 export default (props) => {
   return (

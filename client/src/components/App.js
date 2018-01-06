@@ -1,12 +1,9 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
 
 import '../style/App.css';
 import ProductList from '../containers/product_list'
 import TeaMenu from './tea_menu';
 import Footer from './footer'
-import { Nav, NavItem, Navbar, Badge, Row } from 'react-bootstrap';
 
 export class App extends Component {
 
